@@ -1,8 +1,36 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+let gameList = [];
+
+async function fetchGames() {
+  try {
+    let promise = await fetch('http://localhost:4999/ls');
+    let json =  await promise.json();
+    gameList = Object.values(json)
+  }
+  catch (err) {
+    console.log('fetch failed', err);
+    return err
+  }
+}
+
 export default function App() {
   const [state, setState] = useState("welcome");
+
+  const gameItem = ({number, issued}) => { 
+    return (<li key={number}><a href="localhost:5555/">game#{number} issued {issued}</a></li> )
+  }
+
+  function GameList() {
+    fetchGames();
+    console.log('gameList',gameList);
+    return(
+      <ul>
+        { gameList.map(gameItem) }
+      </ul>
+    )
+  }
 
   function welcome() {
     return (
@@ -13,11 +41,11 @@ export default function App() {
         <button className="myButton" onClick={() => setState("localplay")}>
           Local Play
         </button>
-        <br /> ------------- <br />
+        <br/> ------------- <br />
         <button className="myButton" onClick={() => setState("networkplay")}>
           Network Play
         </button>
-        <br /> ------------- <br />
+        <br/> ------------- <br />
         <br />
         <br />
         <br />
@@ -105,13 +133,19 @@ export default function App() {
         <button className="myButton" onClick={() => setState("joingame")}>
           Join an existing game
         </button>
-        <br /> ------------- <br />
+        <br/> ------------- <br/>
+        <div id="challenges">
+          <GameList />
+        </div>
+        <br/> ------------- <br/>
         <button className="myButton" onClick={() => setState("welcome")}>
           Back
         </button>
       </div>
     );
   }
+
+
 
   function createGame() {
     return (
