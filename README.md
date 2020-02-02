@@ -49,5 +49,9 @@ A quick sanity check with curl.
 Now if you type the URL "http://localhost:5000" into your browser, you should
 arrive at the welcome screen.
 
+## More Information ##
 
+This service is a part of a larger project.
 
+See the main Spacewar project at 
+https://github.com/markcornwell/spacewar.git for addditional informtion.
