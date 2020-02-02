@@ -1,5 +1,5 @@
-# welcome-to-spacewar
-Created with CodeSandbox
+# Welcome to Spacewar (the spacewar welcome service)
+Created with CodeSandbox.io
 
 This code supports a landing and welcome page for a multiplayer spacewar game. 
 It was originally composed with CodeSandbox.io and we strive to maintain compatibility
@@ -11,7 +11,7 @@ You can use the Dockerfile in the root directory to build a Docker image.  I kee
 images on my personal Docker Hub under markcornwell.  You can substitute your own
 Docker Hum account or that of any other docker repository you like.
 
-  $ docker build -t markcornwell/welcome-to-spacewar:1 .
+    $ docker build -t markcornwell/welcome-to-spacewar:1 .
 
 After building, you should be able to see the image listed by the command
 
