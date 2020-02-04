@@ -54,4 +54,4 @@ arrive at the welcome screen.
 This service is a part of a larger project.
 
 See the main Spacewar project at 
-https://github.com/markcornwell/spacewar.git for addditional informtion.
+https://github.com/markcornwell/spacewar for addditional informtion.
