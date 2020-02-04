@@ -146,14 +146,12 @@ export default function App() {
   }
 
 
-
   function createGame() {
     return (
       <div>
         <h1>Spacewar!</h1>
         <h2>New game</h2>
         <br /> ------------- <br />
-        <br />
         <br />
         <p>Game #47 Created</p>
         <p>Waiting for Player 2 to Join</p>
