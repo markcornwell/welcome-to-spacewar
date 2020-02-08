@@ -36,9 +36,9 @@ like this:
 
    <img src="assets/screenshot-welcome-to-spacewar.png"  width=300/>
 
-If you click on the buttons they should be live and your
-spacewar lobby inteface is ready to go.
-
+Your spacewar lobby inteface is ready to go.  However, this is just
+the lobby interface... it won't do you much good without the main
+game server.  This you find at https://github.com/markcornwell/spacewar.
 
 ## Building the docker image ##
 
