@@ -34,10 +34,10 @@ and display a message like:
 If you switch over to your browser you should see something
 like this:
 
-   ![Welcome to Spacewar](https://github.com/markcornwell/welcome-to-spacewar/assets/screenshot-welcome-to-spacewar.png)
+   <img src="assets/screenshot-welcome-to-spacewar.png"  width=300/>
 
 If you click on the buttons they should be live and your
-lobby inteface is ready to go.
+spacewar lobby inteface is ready to go.
 
 
 ## Building the docker image ##
