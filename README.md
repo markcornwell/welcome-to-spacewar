@@ -4,7 +4,7 @@ Created with CodeSandbox.io
 The welcome server acts as the lobby inteface to the
 servers hosting the spacewar game. The software is in
 the early stages of development.  Consequently,
-these instructions assume the reader is a developer
+this writeup assumes the reader is a developer
 interesting in contributing to the project.
 
 ## Starting the development server
