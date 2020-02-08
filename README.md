@@ -1,9 +1,44 @@
 # Welcome to Spacewar (the spacewar welcome service)
 Created with CodeSandbox.io
 
-This code supports a landing and welcome page for a multiplayer spacewar game. 
-It was originally composed with CodeSandbox.io and we strive to maintain compatibility
-with that development platform.
+The welcome server acts as the lobby inteface to the
+servers hosting the spacewar game. The software is in
+the early stages of development.  Consequently,
+these instructions assume the reader is a developer
+interesting in contributing to the project.
+
+## Starting the development server
+
+You can start the server from the command line
+with
+
+    $ npm run start
+    
+This may take half a minute to complete.  This start
+both starts up a server and fires up a tab in your
+browser to run the clint side js code in your browser.
+
+When it complete you your terminal window will clear
+and display a message like:
+
+    Compiled successfully!
+    
+    You can now view welcome-to-spacewar in the browser.
+
+    Local:            http://localhost:3000/
+    On Your Network:  http://192.168.1.154:3000/
+
+    Note that the development build is not optimized.
+    To create a production build, use npm run build.
+
+If you switch over to your browser you should see something
+like this:
+
+   ![](/assets/screenshot_welcome_to_spacewar.png)
+
+If you click on the buttons they should be live and your
+lobby inteface is ready to go.
+
 
 ## Building the docker image ##
 
