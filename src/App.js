@@ -8,15 +8,30 @@ async function fetchGames() {
     let promise = await fetch('http://localhost:4999/ls');
     let json =  await promise.json();
     gameList = Object.values(json)
+    //setGameList(Object.values(json))
   }
   catch (err) {
-    console.log('fetch failed', err);
+    console.log('fetchGames: failed', err);
+    return err
+  }
+}
+
+async function newGame() {
+  try {
+    let promise = await fetch('http://loclahost:4999/new');
+    let json = await promise.json();
+    gameList = Object.values(json)
+    //setGameList(Object.values(json))      
+  }
+  catch (err) {
+    console.log('newGame: failed')
     return err
   }
 }
 
 export default function App() {
   const [state, setState] = useState("welcome");
+  //const [gameList, setGameList] = useState([]);
 
   const gameItem = ({number, issued}) => { 
     return (<li key={number}><a href="localhost:5555/">game#{number} issued {issued}</a></li> )
@@ -27,6 +42,7 @@ export default function App() {
     console.log('gameList',gameList);
     return(
       <ul>
+        <li>in progress</li>
         { gameList.map(gameItem) }
       </ul>
     )
@@ -126,7 +142,7 @@ export default function App() {
         <h2>Network Play</h2>
         <h3>Select an option below</h3>
         <br /> ------------- <br />
-        <button className="myButton" onClick={() => setState("creategame")}>
+        <button className="myButton" onClick={() => newGame()}>
           Create a new game
         </button>
         <br /> ------------- <br />
@@ -144,7 +160,6 @@ export default function App() {
       </div>
     );
   }
-
 
   function createGame() {
     return (

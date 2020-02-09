@@ -1,0 +1,4 @@
+# Recommended best practice ingore node_modules
+#
+node_modules/
+
